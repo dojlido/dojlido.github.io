@@ -1,0 +1,121 @@
+/* Stylizacja dla całego App z centrowaniem */
+.App {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  min-height: 100vh; /* Pełna wysokość ekranu */
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Stylizacja przycisków */
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Stylizacja dla elementów select */
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Stylizacja dla inputów tekstowych */
+input[type="text"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ced4da;
+  transition: border-color 0.3s ease;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: calc(100% - 22px);
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Stylizacja listy e-maili */
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+/* Dodanie odstępu między poszczególnymi elementami */
+input, select, button, ul {
+  width: 100%; /* Ustaw szerokość na 100% */
+  max-width: 400px; /* Maksymalna szerokość dla lepszej czytelności */
+}
+
+
+img {
+  border-radius: 50%;
+}
+
+/* Stylizacja przycisków kopiowania */
+.copy-button {
+  margin-left: 10px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.copy-button:hover {
+  background-color: #218838;
+}
+
+/* Stylizacja dla wiadomości o sukcesie kopiowania */
+.copy-success {
+  margin-top: 10px;
+  color: #28a745;
+  font-weight: bold;
+}
+
