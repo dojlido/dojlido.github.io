@@ -1,16 +1,15 @@
-name: Deploy to GitHub Page
+name: Deploy to GitHub Pages
 
 on:
   push:
     branches:
-      - main
+      - main 
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    environment: github-pages # Używa sekretów zdefiniowanych w tym środowisku
     steps:
-      - name: Checkout code
+      - name: Checkout Code
         uses: actions/checkout@v3
 
       - name: Set up Node.js
@@ -18,20 +17,19 @@ jobs:
         with:
           node-version: '22.3.0'
 
-      - name: Install dependencies
+      - name: Install Dependencies
         run: npm install
 
       - name: Build
-        run: npm run build
+        run: npm run build # lub inna komenda do budowania
+
+      - name: Deploy to GitHub Pages
         env:
             VITE_GITHUB_API_URL: ${{ secrets.VITE_GITHUB_API_URL }}
             VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.VITE_GITHUB_TOKEN }}
-          publish_dir: ./build
+        run: |
+          npm install gh-pages
+          npx gh-pages -d build -t $VITE_GITHUB_TOKEN
 
 
           
