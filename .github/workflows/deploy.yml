@@ -29,7 +29,7 @@ jobs:
             VITE_GITHUB_TOKEN: ${{ secrets.VITE_GITHUB_TOKEN }}
         run: |
           npm install gh-pages
-          npx gh-pages -d build -t $VITE_GITHUB_TOKEN
+          npx gh-pages -d dist -t $VITE_GITHUB_TOKEN
 
 
           
