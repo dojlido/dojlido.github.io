@@ -1,9 +1,9 @@
-name: Deploy to GitHub Pages
+name: Deploy to GitHub Page
 
 on:
   push:
     branches:
-      - main  # lub inna gałąź, którą używasz
+      - main  
 
 jobs:
   deploy:
@@ -32,3 +32,6 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./build
+
+
+          
