@@ -3,12 +3,12 @@ name: Deploy to GitHub Page
 on:
   push:
     branches:
-      - main  
+      - main
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    environment: github-pages # Używa sekretów zdefiniowanych w tym środowisku
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
